@@ -3,6 +3,7 @@
  */
 package com.deep.test;
 
+import javax.print.attribute.IntegerSyntax;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +39,17 @@ public class Test {
 				System.out.println("k:"+(k+1));
 			}
 			System.out.println("k:"+k);
+
+			Object o = new Object();
+			Integer i=2;
+			//460141958
+		System.out.println("hashCode:"+o.hashCode());
+		for( i=0;i<200;i++){
+			int h = i.hashCode();
+			System.out.println(h^h>>>16);
+		}
+
+
 			
 
 	}

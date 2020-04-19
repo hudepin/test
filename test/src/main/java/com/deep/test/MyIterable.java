@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.deep.test;
 
@@ -11,7 +11,7 @@ import java.util.Iterator;
  */
 public class MyIterable implements Iterable<Character> {
 	private String str="";
-	
+
 
 	public String getStr() {
 		return str;
@@ -23,25 +23,8 @@ public class MyIterable implements Iterable<Character> {
 	}
 
 
+	@Override
 	public Iterator<Character> iterator() {
-		// TODO Auto-generated method stub
-		return new Iterator<Character>() {
-			private int index=0;
-			public Character next() {
-				// TODO Auto-generated method stub
-				return str.toCharArray()[index++];
-			}
-			
-			public boolean hasNext() {
-				// TODO Auto-generated method stub
-				return index < str.length();
-			}
-
-			public void remove() {
-				// TODO Auto-generated method stub
-				
-			}
-		};
+		return null;
 	}
-
 }
