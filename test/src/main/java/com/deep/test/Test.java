@@ -13,6 +13,7 @@ import java.util.List;
 public class Test {
 	public static final String s = "";
 	static final String s1 = "";
+	List<Boolean> bList;
 
 	public static void main(String[] args) {
 			System.out.println(Runtime.getRuntime().availableProcessors());
@@ -38,6 +39,9 @@ public class Test {
 				System.out.println("k:"+(k+1));
 			}
 			System.out.println("k:"+k);
+			String s="JACKY CELINE 女士牛皮挎包 水红色  39*10*30cm .";
+		System.out.println(s.length());
+		System.out.println(System.currentTimeMillis());
 			
 
 	}

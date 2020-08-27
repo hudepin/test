@@ -9,6 +9,7 @@ public class User {
     private String userName;
     private String phone;
     private String age;
+    public User(){}
 
     public User(String userName, String phone, String age) {
         this.userName = userName;
