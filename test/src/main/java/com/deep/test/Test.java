@@ -3,6 +3,7 @@
  */
 package com.deep.test;
 
+import javax.print.attribute.IntegerSyntax;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +40,7 @@ public class Test {
 				System.out.println("k:"+(k+1));
 			}
 			System.out.println("k:"+k);
-			String s="JACKY CELINE 女士牛皮挎包 水红色  39*10*30cm .";
+			String s="JACKY CELINE ŮʿţƤ��� ˮ��ɫ  39*10*30cm .";
 		System.out.println(s.length());
 		System.out.println(System.currentTimeMillis());
 			
