@@ -1,7 +1,7 @@
 package com.deep.test.datastructure;
 
 /**
- * <p>Description:</p>
+ * <p>Description: 单向链表</p>
  * author:hudepin
  * createTime:2019-10-17 9:53
  */

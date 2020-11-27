@@ -1,7 +1,6 @@
 package com.deep.test.algorithm;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author hudepin
@@ -12,9 +11,19 @@ import java.util.Queue;
  */
 public class Test {
     public static void main(String[] args) {
-        PriorityQueue  queue = new PriorityQueue();
+        PriorityQueue<Integer>  queue = new PriorityQueue<Integer>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2-o1;
+            }
+        });
         queue.add(1);
         queue.add(2);
         System.out.println(queue.poll());
+        Map<Integer,Integer> map = new HashMap<>();
+        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+            queue.add(entry.getValue());
+        }
+
     }
 }

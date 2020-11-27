@@ -10,7 +10,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * createTime:2019-11-1 16:49
  */
 public class QueueTets {
-    private static InheritableThreadLocal<ConcurrentLinkedQueue<Long>> waitProcessStoreQueue =new InheritableThreadLocal<>();
+    //InheritableThreadLocal 子线程能读取
+    private static ThreadLocal<ConcurrentLinkedQueue<Long>> waitProcessStoreQueue =new InheritableThreadLocal<>();
     public static void main(String[] args) {
         ConcurrentLinkedQueue<Long> queue =new ConcurrentLinkedQueue<>();
         List<Long> ids =new ArrayList<Long>();
@@ -25,7 +26,7 @@ public class QueueTets {
                 ConcurrentLinkedQueue<Long> queue = waitProcessStoreQueue.get();
                 Long sid =null;
                 while((sid = queue.poll())!=null){
-                    System.out.println("sid"+sid);
+                    System.out.println(Thread.currentThread().getName()+",sid:"+sid);
                 }
             }
         }).start();
@@ -39,7 +40,7 @@ public class QueueTets {
                 }
                 Long sid =null;
                 while((sid = queue.poll())!=null){
-                    System.out.println("sid1"+sid);
+                    System.out.println(Thread.currentThread().getName()+"sid:"+sid);
                 }
             }
         }).start();

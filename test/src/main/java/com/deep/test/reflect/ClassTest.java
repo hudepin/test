@@ -6,6 +6,7 @@ package com.deep.test.reflect;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Type;
+import java.util.Arrays;
 
 /**
  * @author HDP23
@@ -34,7 +35,16 @@ public class ClassTest {
         System.out.println(int.class == Integer.class);//int类型和Integer类型是不一样的，一个是基本类型，一个是对象类型  
         System.out.println(int.class == Integer.TYPE);//8中数据基本类型都对应与其对象类型中的TYPE字段  
         System.out.println(int[].class.isPrimitive());//数组类型不是原始类型，数组是一个对象类型即int
-	}
+            Obj obj = new Obj();
+            obj.setPass("123");
+            obj.setName("123213213");
+            System.out.println(obj.getClass().getSuperclass().getSuperclass().equals(Object.class));
+            Arrays.stream(obj.getClass().getDeclaredFields()).forEach(e->{
+                    System.out.println(e.getName());            });
+            Arrays.stream(obj.getClass().getSuperclass().getDeclaredFields()).forEach(e->{
+                    System.out.println(e.getName());
+            });
+    }
 	
 	public static void A() throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, ClassNotFoundException{
 		 /**获取String对象指定的构造方法(通过方法的参数类型,传递参数的Class对象)*/  

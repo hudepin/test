@@ -1,5 +1,6 @@
 package com.deep.test.datastructure;
 
+import com.deep.test.entity.User;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -12,6 +13,11 @@ public class Test {
         String ss ="123";
         char[] chars = ss.toCharArray();
        combine(chars,0,chars.length);
+        User u = new User("1");
+        User u1 = u;
+        u = new User("2");
+        System.out.println(u1);
+        Object o = new Object();
 
     }
     public static void combine(char[] chars,int start,int end){

@@ -20,7 +20,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * @since 1.2.0
  */
 @EnableAsync
-public class CrycleRefDemo {
+public class CrycleRefDemo{
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         applicationContext.register(CrycleRefDemo.class);

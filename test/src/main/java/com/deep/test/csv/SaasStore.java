@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class SaasStore {
     private Long id;
+    private String cityName;
 
     private Long merchantSid;
 
@@ -370,5 +371,13 @@ public class SaasStore {
 
     public void setXcStoreType(String xcStoreType) {
         this.xcStoreType = xcStoreType;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 }

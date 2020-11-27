@@ -105,7 +105,7 @@ public class SaasStoreCsvRead {
     }
     public static  List<SaasStore> redcsvPrd(){
         try {
-            String csvFilePath = "E:\\STORE_PRD.csv";
+            String csvFilePath = "E:\\data20201026prd.csv";
             FileInputStream fileInputStream = new FileInputStream(new File(csvFilePath));
             InputStreamReader reader = new InputStreamReader(fileInputStream,"GBK");
             CSVParser parser = CSVFormat.DEFAULT.withHeader("CITY_NAME","STORE_NAME","FUNTIONS","STORE_CODE","PROVINCE","CITY","AREA","STATE","STORE_TYPE","ADDR")
@@ -127,6 +127,7 @@ public class SaasStoreCsvRead {
 //                        } else if(store.getBuId().equals("2030")){
 //                            store.setXcStoreType("3");
 //                        }
+
                         store.setXcStoreCode(record.get("STORE_CODE").trim());
                         store.setStoreName(record.get("STORE_NAME").trim());
                         store.setAddrProvince(record.get("PROVINCE").trim());
