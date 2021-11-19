@@ -39,6 +39,7 @@ public class Test {
         System.out.println(supplier.get());
         Supplier<Integer> supplier1 = ()->(supTest(1,3));
         System.out.println(supplier1.get());
+        System.out.println(System.currentTimeMillis());
 
 
     }

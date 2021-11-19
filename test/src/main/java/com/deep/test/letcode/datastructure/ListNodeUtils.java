@@ -110,8 +110,14 @@ public class ListNodeUtils {
     public static void printListNode(ListNode head) {
         System.out.println("");
         ListNode temp = head;
+        int i=0;
         while (temp != null) {
-            System.out.print(temp.val + "->");
+            if(i==0){
+                System.out.print(temp.val);
+            }else{
+                System.out.print( "->"+temp.val );
+            }
+            i++;
             temp = temp.next;
         }
         System.out.println("");

@@ -1,8 +1,6 @@
 package com.deep.test.thread;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadInfo;
-import java.lang.management.ThreadMXBean;
+import java.lang.management.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,6 +19,13 @@ public class ThreadNumTest {
             System.out.println("[" + info.getThreadId() + "]" + info.getThreadName());
         }
         System.out.println(Thread.activeCount());
+
+        ClassLoadingMXBean classLoadingMXBean = ManagementFactory.getClassLoadingMXBean();
+        System.out.println("loadedClassCount:" + classLoadingMXBean.getLoadedClassCount());
+        System.out.println("totalLoadedClassCount: "+classLoadingMXBean.getTotalLoadedClassCount());
+        MemoryMXBean memoryMXBean =  ManagementFactory.getMemoryMXBean();
+        System.out.println("heapMemoryUsage:" + memoryMXBean.getHeapMemoryUsage());
+        System.out.println("nonHeapMemoryUsage:" + memoryMXBean.getNonHeapMemoryUsage());
         while (true){
             try {
                 TimeUnit.SECONDS.sleep(10);
